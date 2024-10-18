@@ -8,14 +8,16 @@
     "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "yarn lint && jest"
+    "test": "npm run lint && jest"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "dotenv": "^16.4.5",
+    "install": "^0.13.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.26.2",
-    "install": "^0.13.0"
+    "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.24.8",

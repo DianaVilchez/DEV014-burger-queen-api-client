@@ -1,12 +1,58 @@
-.loginSection {
+html, body {
+    height: 100%;
+    margin: 0;
+    padding:0;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.loginForm {
+    position: relative;
+    z-index: 2; 
+    padding: 10px;
+    /* border-radius: 10px; */
+    display: flex;
     flex-direction: column;
+    /* gap: 10px */
+    padding-top:97px;
+    display: flex;
+    align-items: center;
 }
 input{
+    width: 330px;
+    height: 33px;
+    border-radius: 17px;
+    margin: 14.2px  13px ;
+    border-color:transparent;
+    
+}
+.username{
+    background-color:rgba(255, 96, 96, 0.4) ;
+}
+.password{
+    background-color: rgba(173, 245, 86, 0.4);
+}
+.imgLogin{
+    position: absolute;
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover; 
+    z-index: 1;
+    
+}
+.buttonLogin{
+    margin-top: 44.3px;
     width: 280px;
-    height: 30px;
-    border-radius: 40px;
-    margin:20px;
+    height: 35px;
+    border-radius:17px;
+    background-color:#9B6039;
+    color: white;
+}
+.login{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
 }
