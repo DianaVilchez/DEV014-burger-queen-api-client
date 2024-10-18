@@ -1,19 +1,6 @@
 import { useEffect, useState } from "react";
 import { Product } from "../Models/Products";
-
-export const ProductCard = ({ name, img }: { name: string; img: string }) => {
-    return (
-        <div className="product-card">
-            <div className="buttonsShop">
-                <div className="buttonAmount"></div>
-                <div className="buttonMore">+</div>
-                <div className="buttonLess">-</div>
-            </div>
-            <img src={img} alt={name} />
-            <h3>{name}</h3>
-        </div>
-    );
-};
+import { ProductCard } from "./ProductCard";
 
 export const ListBreakfast = () => {
     const token = localStorage.getItem("token");

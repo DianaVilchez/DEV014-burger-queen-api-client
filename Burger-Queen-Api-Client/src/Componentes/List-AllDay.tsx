@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Product } from "../Models/Products";
-import { ProductCard } from "./List-Breakfast";
+import { ProductCard } from "./ProductCard";
 
 export const ListAllDayMenu = () => {
     const token = localStorage.getItem("token");
