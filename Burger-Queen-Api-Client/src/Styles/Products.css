@@ -1,13 +1,8 @@
-body {
-    justify-items: center;
-    flex-direction: column;
-}
-
 main {
     background-color: #fff6de;
     width: 100vw;
     min-height: 100vh;
-    flex-grow: 1;
+    /* flex-grow: 1; */
 }
 
 .logo {
@@ -119,7 +114,7 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    font-weight: 900;
+    font-weight: 500;
     font-size: 25px;
 }
 

@@ -10,9 +10,6 @@ export const ProductCard = ({ name, img }: { name: string; img: string }) => {
         setCount(count - 1)
         }
     }
-    // const handleAmount = () =>{
-    //     setCount
-    // }
     return (
         <div className="product-card">
             <div className="buttonsShop">

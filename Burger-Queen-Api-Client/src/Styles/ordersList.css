@@ -1,0 +1,57 @@
+.listOrder{
+    border-color: black;
+    border-style: solid;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 40px;
+}
+.order-header{
+    display: flex;
+    border-color: black;
+    border-style: solid;
+    padding:5px;
+    flex-direction: row;
+    
+}
+.order-code{
+    display: flex;
+    flex-direction: column;
+    border-color: black;
+    border-style: solid;
+    /* margin:5px 30px; */
+
+}
+.order-code span{
+    display: flex;
+    border-color: black;
+    border-style: solid;
+    margin:0px 30px;
+}
+.customer {
+    display: flex;
+    flex-direction: column;
+    border-color: black;
+    border-style: solid;
+    /* margin:5px 30px; */
+}
+.customer span{
+    display: flex;
+    border-color: black;
+    border-style: solid;
+    margin:0px 30px;
+}
+.listOrder h2{
+    font-size: 20px;
+    justify-content: flex-start;
+    display: flex;
+    color: black;
+}
+table{
+    font-size: 18px;
+    font-family: "afacad";
+    margin-left: 10px;
+}
+.productPrice{
+    padding-left:100px;
+    color:blue
+}

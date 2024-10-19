@@ -6,6 +6,7 @@ import { HeaderLogo } from "./Header";
 import { useState } from "react";
 import { ListBreakfast } from "./List-Breakfast";
 import { ListAllDayMenu } from "./List-AllDay";
+import { Link } from "react-router-dom";
 
 
 export const Products = () => {
@@ -80,7 +81,9 @@ export const Products = () => {
           <ListAllDayMenu />
         </div>
       )}
-      <button className="buttonNext">NEXT</button>
+      <Link to ="/products/selected">
+        <button className="buttonNext">NEXT</button>
+      </Link>
     </main>
   );
 };
