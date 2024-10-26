@@ -1,5 +1,10 @@
 export interface Product {
+    id: number;
     name: string;
-    image: string;  // Asumiendo que 'image' es una URL
+    price: number;
+    image: string;
+    type: string;
+    dateEntry: string;
     menu:string;
+
 }

@@ -1,26 +1,20 @@
 .listOrder{
-    border-color: black;
-    border-style: solid;
     border-radius: 20px;
     padding: 20px;
     margin: 40px;
+    background-color: white;
 }
 .order-header{
     display: flex;
-    border-color: black;
-    border-style: solid;
+    border-bottom: 1.5px solid black;
     padding:5px;
     flex-direction: row;
-    
-}
-.order-code{
-    display: flex;
-    flex-direction: column;
-    border-color: black;
-    border-style: solid;
-    /* margin:5px 30px; */
+    font-family: 'afacad';
+    font-size: 20px;
+    color:#747474;
 
 }
+
 .order-code span{
     display: flex;
     border-color: black;
@@ -41,17 +35,29 @@
     margin:0px 30px;
 }
 .listOrder h2{
+    margin: 10px 0;
     font-size: 20px;
     justify-content: flex-start;
     display: flex;
     color: black;
+    font-family: 'Josefin Sans';
 }
 table{
+    /* border-color: black;
+    border-style: solid; */
     font-size: 18px;
-    font-family: "afacad";
+    font-family: "josefin sans";
     margin-left: 10px;
+    text-align: left;
+    vertical-align: top;
+    color:rgb(0, 0, 0);
 }
 .productPrice{
     padding-left:100px;
-    color:blue
+    
 }
+th{
+vertical-align: top;
+padding-left: 10px;
+}
+

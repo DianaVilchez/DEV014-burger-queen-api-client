@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { FormLogin } from "./FormLogin";
-import { LoginConection } from "../Services/loginMockAPI";
+import { LoginConection } from "../Services/LoginMockApi";
+// import { Background } from "./Background";
+
 
 export const Login = () => {
  const [email,setUsername] = useState('');
@@ -10,6 +12,7 @@ export const Login = () => {
      await LoginConection({ email, password });
    };
   return (
+
      <FormLogin
        email={email}
        password={password}
@@ -17,5 +20,6 @@ export const Login = () => {
        setPassword={setPassword}
        onLogin={handleLogin}
      />
+
    );  
 }

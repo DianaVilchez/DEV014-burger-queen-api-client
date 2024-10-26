@@ -4,26 +4,47 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { HeaderLogo } from "./Header";
 import { useState } from "react";
-import { ListBreakfast } from "./List-Breakfast";
-import { ListAllDayMenu } from "./List-AllDay";
-import { Link } from "react-router-dom";
+import { ListProducts } from "./List-Products";
+// import { ListAllDayMenu } from "./List-AllDay";
+import { useNavigate } from "react-router-dom";
+import { SelectedProduct } from "../Services/FetchOrdersPost";
+import { Background } from "./Background";
+
 
 
 export const Products = () => {
+  const navigate = useNavigate();
   const [visible0ptionsBreakfast, setOptionsBreakfast] = useState(false);
   const [visible0ptionsAllDay, setOptionsAllDay] = useState(false);
-  
+  const [selectedProducts, setSelectedProducts] = useState<SelectedProduct[]>([]);
+  const [customerName, setCustomerName] = useState('');
+  const [menuFilter, setMenuFilter] = useState<"Breakfast" | "All Day Menu">("Breakfast");
+
   const handleClickBreakfast = () => {
+    setMenuFilter("Breakfast");
     setOptionsBreakfast(!visible0ptionsBreakfast);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   const handleClickAllDay = () => {
+    setMenuFilter("All Day Menu");
     setOptionsAllDay(!visible0ptionsAllDay);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-  // const saveCustomerName = () => {
-  //     localStorage.setItem('customerName', customerName);
-  // }
+  const handleSelectedProductsChange = (products:SelectedProduct[]) => {
+    setSelectedProducts((prevProducts) => [...prevProducts, ...products]);
+  };
+  
+  const handleNextClick = () => {
+    navigate("/products/selected", { state: { selectedProducts } });
+    localStorage.setItem('customerName', customerName);
+  };
 
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setCustomerName(event.target.value); 
+  }
+  
   return (
+    <Background  style={{ backgroundColor: '#fff6de' }}>
     <main>
       <HeaderLogo />
       <span
@@ -47,7 +68,8 @@ export const Products = () => {
         <input
           className="customerName"
           type="text"
-          //   value={customerName}
+          value={customerName}
+          onChange={handleChange}
           placeholder="CUSTOMER NAME"
         />
       </form>
@@ -63,7 +85,8 @@ export const Products = () => {
       </section>
       {visible0ptionsBreakfast && (
         <div>
-          <ListBreakfast />
+          <ListProducts onSelectedProductsChange={handleSelectedProductsChange}
+          filteredMenu={menuFilter} />
         </div>
       )}
       <section className="optionDinner" onClick={handleClickAllDay}>
@@ -78,12 +101,17 @@ export const Products = () => {
       </section>
       {visible0ptionsAllDay && (
         <div>
-          <ListAllDayMenu />
+          <ListProducts
+                        onSelectedProductsChange={handleSelectedProductsChange}
+                        filteredMenu={menuFilter} // Pasar el filtro seleccionado
+                    />
         </div>
       )}
-      <Link to ="/products/selected">
-        <button className="buttonNext">NEXT</button>
-      </Link>
+       <button className="buttonNext" onClick={handleNextClick}>
+        NEXT
+      </button>
     </main>
+    </Background>
   );
 };
+

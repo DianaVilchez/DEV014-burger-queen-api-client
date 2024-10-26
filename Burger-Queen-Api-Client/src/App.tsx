@@ -4,9 +4,16 @@ import { Login } from './Componentes/Login'
 import { Products } from './Componentes/Products'
 import { Orders } from './Componentes/Orders'
 import { ProductsSelected } from './Componentes/ProductsSelected'
+// import { useState } from 'react'
+// import { SelectedProduct } from './Services/FetchOrdersPost'
 
 
 function App() {
+  // const [selectedProducts, setSelectedProducts] = useState<SelectedProduct[]>([]);
+
+  // const handleSelectedProductsChange = (products: SelectedProduct[]) => {
+  //     setSelectedProducts(products);
+  // };
   return (
   <div className="App">
     <Routes>
